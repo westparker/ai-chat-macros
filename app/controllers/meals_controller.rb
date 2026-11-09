@@ -17,3 +17,4 @@ class MealsController < ApplicationController
 
   render({:template => "meal_templates/results" })
 end
+end
