@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "ai-chat"
 gem "rails", "~> 8.1"               # The web framework
 gem "propshaft"                       # Asset pipeline (CSS, JS, images)
 gem "pg", "~> 1.6"                    # PostgreSQL database adapter
