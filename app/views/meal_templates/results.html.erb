@@ -6,8 +6,44 @@
   </div>
 <% end %>
 
-<div>
-  <% the_content = @api_response.fetch(:content) %>
+<dl>
+  <dt>Carbs (grams)</dt>
+  <dd><%= @ai_content.fetch(:total_grams_of_carbs) %></dd>
 
-  <%= simple_format(the_content) %>
-</div>
+  <dt>Fat (grams)</dt>
+  <dd><%= @ai_content.fetch(:total_grams_of_fat) %></dd>
+
+  <dt>Protein (grams)</dt>
+  <dd><%= @ai_content.fetch(:total_grams_of_protein) %></dd>
+
+  <dt>Total calories (kcal)</dt>
+  <dd><%= @ai_content.fetch(:total_calories) %></dd>
+
+  <dt>Rationale</dt>
+  <dd><%= @ai_content.fetch(:rationale) %></dd>
+</dl>
+
+<h2>Items</h2>
+
+<ol>
+  <% @ai_content.fetch(:items).each do |an_item| %>
+    <li>
+      <dl>
+        <dt>Description</dt>
+        <dd><%= an_item.fetch(:description) %></dd>
+
+        <dt>Carbs (grams)</dt>
+        <dd><%= an_item.fetch(:grams_of_carbs) %></dd>
+
+        <dt>Fat (grams)</dt>
+        <dd><%= an_item.fetch(:grams_of_fat) %></dd>
+
+        <dt>Protein (grams)</dt>
+        <dd><%= an_item.fetch(:grams_of_protein) %></dd>
+
+        <dt>Calories (kcal)</dt>
+        <dd><%= an_item.fetch(:calories) %></dd>
+      </dl>
+    </li>
+  <% end %>
+</ol>

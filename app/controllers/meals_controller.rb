@@ -23,7 +23,9 @@ if @uploaded_photo.present?
     @chat.user(@the_description)
   end
 
+  @chat.schema_file = "lib/openai_schemas/meal_schema.json"
   @api_response = @chat.generate!
+  @ai_content = @api_response.fetch(:content)
 
   render({:template => "meal_templates/results" })
 end
