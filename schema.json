@@ -1,0 +1,32 @@
+{
+  "name": "nutrition_totals",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "carbs": {
+        "type": "integer",
+        "description": "Carbohydrates in grams."
+      },
+      "fat": {
+        "type": "integer",
+        "description": "Fat in grams."
+      },
+      "protein": {
+        "type": "integer",
+        "description": "Protein in grams."
+      },
+      "total_calories": {
+        "type": "integer",
+        "description": "Total calories in kilocalories (kcal)."
+      }
+    },
+    "required": [
+      "carbs",
+      "fat",
+      "protein",
+      "total_calories"
+    ],
+    "additionalProperties": false
+  }
+}

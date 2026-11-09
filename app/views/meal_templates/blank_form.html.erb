@@ -1,7 +1,13 @@
 
 <h1>Describe your meal</h1>
 
-<form action="/process_inputs">
+<form action="/process_inputs" method="post" enctype="multipart/form-data">
+  <div>
+    <label for="photo_field">Photo of meal</label>
+    <input id="photo_field" type="file" name="photo_param">
+  </div>
+
+
   <div>
     <label for="description_field">Description of meal</label>
     <textarea id="description_field" name="description_param"></textarea>

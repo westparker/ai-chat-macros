@@ -1,9 +1,13 @@
 <h1>Results</h1>
 
-<div>
-  <%= @chat.to_html %>
-</div>
+<% if @photo_data_uri %>
+  <div>
+    <img src="<%= @photo_data_uri %>" alt="The uploaded meal photo" width="480">
+  </div>
+<% end %>
 
 <div>
-  <%= @api_response.to_html %>
+  <% the_content = @api_response.fetch(:content) %>
+
+  <%= simple_format(the_content) %>
 </div>
